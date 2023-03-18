@@ -3,8 +3,15 @@ const employee={
     name:"",
     streetAddress:""
 };
-employee.name="sam";
-employee.streetAddress="11 Broadway";
+beforeEach(function () {
+    for (const key in employee) {
+      delete employee[key];
+    }
+
+    employee.name = 'Michal';
+  });
+employee.name="Michal";
+employee.streetAddress="Nairobi";
 employee;
 function updateEmployeeWithKeyAndValue(employee, key, value){
     const newEmployee = {...employee};
